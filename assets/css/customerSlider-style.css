@@ -1,0 +1,193 @@
+.customerSlider{
+    width: 80%;
+    margin: auto;
+    margin-top: 150px;
+}
+.Swiper {
+    width: 100%;
+    margin: auto;
+}
+
+.cousttomerSlide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cousttomerSlide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.next-prev-slider {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.next-prev-slider .swiper-button-next {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    position: static;
+    margin: 5px;
+}
+
+.next-prev-slider .swiper-button-next::after {
+    content: '>>';
+    font-size: 18px;
+    font-weight: 900;
+    color: gray;
+}
+
+.next-prev-slider .swiper-button-prev {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    position: static;
+    margin: 5px;
+}
+
+.next-prev-slider .swiper-button-prev::after {
+    content: '<<';
+    font-size: 18px;
+    font-weight: 900;
+    color: gray;
+}
+
+.actionSlider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 45px 0;
+}
+
+.pagination {}
+
+.pagination .swiper-pagination {
+    position: static;
+    font-size: 30px;
+    color: gray;
+}
+
+.pagination .swiper-pagination .swiper-pagination-current {
+    color: #ff7e00;
+}
+
+.singleCustomer{
+    padding: 60px;
+    position: relative;
+    background-color: #f5f9fc;
+    transition: all .5s ease;
+}
+
+.singleCustomer:hover{
+    background-color: #045ba8;
+}
+.singleCustomer .customerAuthor{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.singleCustomer .customerAuthor::before {
+    position: absolute;
+    content: '';
+    width: 140px;
+    height: 140px;
+    top: -20px;
+    left: -20px;
+    border: 3px dashed #045ba8;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.singleCustomer:hover .customerAuthor::before{
+    border-color: #f5f9fc;
+}
+.singleCustomer:hover .customerAuthor::after{
+    background-color: #045ba8;
+}
+.singleCustomer .customerAuthor::after{
+    position: absolute;
+    content: '';
+    top: -85px;
+    left: -50px;
+    background-color: #f5f9fc;
+    width: 140px;
+    height: 180px;
+    -webkit-transform: rotate(55deg);
+    -ms-transform: rotate(55deg);
+    transform: rotate(55deg);
+    z-index: -1;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+.singleCustomer .customerAuthor img{
+    width: 100px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    z-index: 3;
+}
+
+.customerContent-slider{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.customerContent-slider p{
+    text-align: justify;
+    padding: 10px 0;
+    color: gray;
+}
+
+.singleCustomer:hover .customerContent-slider p{
+    color: #fff;
+}
+.singleCustomer:hover .customerContent-slider h2{
+    color: #fff;
+}
+.singleCustomer:hover .customerContent-slider span{
+    color: #fff;
+}
+
+.customerContent-slider h2{
+    font-weight: bold;
+}
+
+.customerContent-slider span{
+    color: #045ba8;
+    font-size: 18px;
+}
+
+@media screen and (max-width:600px) {
+    .customerSlider{
+        width: 95%;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:768px) {
+    .customerSlider{
+        width: 95%;
+    }
+}

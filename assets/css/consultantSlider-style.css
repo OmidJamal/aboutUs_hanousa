@@ -1,0 +1,91 @@
+
+.consSlider{
+    width: 80%;
+    margin: 150px auto 100px auto;
+}
+.swiper {
+    width: 100%;
+    margin: auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide .backGround-hover{
+    background-image: linear-gradient(#ffffff00 , #045ba8);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+}
+.swiper-slide:hover .backGround-hover{
+    height: 100%;
+    transition: height 0.5s ease;
+}
+
+.swiper-slide .detail{
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+.swiper-slide:hover .detail{
+    bottom: 20px;
+    overflow: visible;
+    transition: all 1s ease;
+}
+.swiper-slide .detail a{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.swiper-slide .detail a:hover{
+    color: #ff7e00;
+    transition: all 0.5s ease;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.consSlider .joinUs{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.consSlider .joinUs a{
+    text-decoration: none;
+    color: gray;
+    border: 2px solid #ff7e00 ;
+    display: inline-block;
+    padding: 20px 35px;
+    border-radius: 35px;
+    transition: all 0.5s ease;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.consSlider .joinUs a:hover{
+    background-color: #ff7e00;
+    color: #fff;
+}
+
+@media screen and (max-width:600px) {
+    .consSlider{
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .consSlider{
+        width: 95%;
+    }
+}

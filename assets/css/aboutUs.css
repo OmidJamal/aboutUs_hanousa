@@ -1,0 +1,764 @@
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../fonts/webfonts/Vazirmatn[wght].woff2") format("woff2 supports variations"), url("../fonts/webfonts/Vazirmatn[wght].woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+  font-family: Vazirmatn;
+}
+
+/* headerAboutUs Section styles  start --------- */
+.headerContainer {
+  background-image: url("../img/page-banner.jpg");
+  background-position: center center;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+.headerContainer::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.headerContainer .headerContent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+  color: #fff;
+}
+.headerContainer .headerContent h1 {
+  font-size: 70px;
+}
+.headerContainer .headerContent h2 {
+  border-bottom: 1px solid #fff;
+}
+.headerContainer::after {
+  background-color: #ff7e00;
+  opacity: 0.15;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  position: absolute;
+  content: " ";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+/* -------------------------------------- */
+/* ourCompany section styles satrt ------ */
+.companyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding: 150px 0;
+  width: 70%;
+  margin: auto;
+  overflow: hidden;
+}
+.companyContainer .companyBanner {
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
+.companyContainer .companyBanner img {
+  width: 100%;
+}
+.companyContainer .companyBanner .onIcon {
+  background-color: #ff7e00;
+  opacity: 0.8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.companyContainer .companyBanner .onIcon img {
+  width: 100px;
+}
+.companyContainer .companyContent {
+  padding-right: 30px;
+  width: 50%;
+}
+.companyContainer .companyContent .contentTitle p {
+  font-size: 20px;
+  color: #ff7e00;
+}
+.companyContainer .companyContent .contentTitle p span {
+  color: #045ba8;
+}
+.companyContainer .companyContent .contentTitle h1 {
+  font-size: 45px;
+  text-align: justify;
+  color: #1d2733;
+}
+.companyContainer .companyContent .contentmid {
+  width: 70%;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.companyContainer .companyContent .contentmid .midItems p.p-t {
+  color: #ff7e00;
+  font-size: 25px;
+}
+.companyContainer .companyContent .contentmid .midItems p.p-t span {
+  color: #1d2733;
+}
+.companyContainer .companyContent .contentmid .midItems p.p-b {
+  padding-top: 10px;
+  color: gray;
+}
+.companyContainer .companyContent .contentBody {
+  padding-top: 20px;
+  width: 70%;
+  text-align: justify;
+}
+.companyContainer .companyContent .contentBody p {
+  color: gray;
+  padding-top: 20px;
+}
+/* -------------------------------------- */
+/* consor Section style start ----------- */
+.consorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+}
+.consorContainer .consorTitle {
+  text-align: center;
+  color: #1d2733;
+  font-size: 45px;
+}
+.consorContainer .consorTitle span {
+  color: #ff7e00;
+}
+.consorContainer .videoConsor {
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+}
+.consorContainer .videoConsor img {
+  width: 100%;
+}
+.consorContainer .videoConsor .playVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  background-color: #ff7e00;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.consorContainer .videoConsor .playVideo img {
+  width: 25px;
+}
+.consorContainer .videoConsor .playVideo:hover {
+  background-color: #045ba8;
+  color: #fff;
+}
+.consorContainer .videoConsor .playVideo::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transition: all 0.3s ease 0s;
+  animation: video 2s infinite;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+/* -------------------------------------- */
+/* consultant Section styles Start */
+#consultant {
+  background-color: #f5f9fc;
+  padding-top: 150px;
+  margin-top: 150px;
+  padding-bottom: 50px;
+}
+#consultant .consContainer {
+  width: 70%;
+  margin: auto;
+  position: relative;
+}
+#consultant .consContainer .consContent {
+  position: relative;
+}
+#consultant .consContainer .consContent .consTitle {
+  text-align: center;
+  padding-bottom: 70px;
+}
+#consultant .consContainer .consContent .consTitle h5.subTitle {
+  font-size: 20px;
+  color: #ff7e00;
+}
+#consultant .consContainer .consContent .consTitle h5.subTitle span {
+  color: #045ba8;
+}
+#consultant .consContainer .consContent .consTitle h2.mainTitle {
+  font-size: 45px;
+  color: #1d2733;
+}
+#consultant .consContainer .consContent .consTitle::before {
+  position: absolute;
+  content: " ";
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background-color: #045ba8;
+  opacity: 0.04;
+  top: 50%;
+  right: 45%;
+  transform: translateY(-50%);
+}
+#consultant .consContainer .consContent .consTitle::after {
+  position: absolute;
+  content: " ";
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background-color: #ff7e00;
+  opacity: 0.04;
+  top: 50%;
+  left: 45%;
+  transform: translateY(-50%);
+}
+/* -------------------------------------- */
+/* customer Section start */
+.customerConainer {
+  width: 70%;
+  margin: auto;
+  padding-top: 200px;
+}
+.customerConainer .customerContent {
+  position: relative;
+  padding-top: 50px;
+}
+.customerConainer .customerContent .cusomerTitle {
+  text-align: center;
+}
+.customerConainer .customerContent .cusomerTitle::before {
+  position: absolute;
+  content: " ";
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background-color: #045ba8;
+  opacity: 0.04;
+  top: 50%;
+  right: 45%;
+  transform: translateY(-50%);
+}
+.customerConainer .customerContent .cusomerTitle .subTitle h5 {
+  font-size: 20px;
+  color: #ff7e00;
+}
+.customerConainer .customerContent .cusomerTitle .subTitle h5 span {
+  color: #045ba8;
+}
+.customerConainer .customerContent .cusomerTitle .subTitle h2 {
+  font-size: 45px;
+  color: #1d2733;
+}
+.customerConainer .customerContent .cusomerTitle::after {
+  position: absolute;
+  content: " ";
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background-color: #ff7e00;
+  opacity: 0.04;
+  top: 50%;
+  left: 45%;
+  transform: translateY(-50%);
+}
+/* -------------------------------------- */
+/* contactUS Section start */
+#contactUS {
+  background-color: #045ba8;
+  padding: 50px 0;
+}
+#contactUS .contactContainer {
+  width: 70%;
+  margin: auto;
+}
+#contactUS .contactContainer .contact-Content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#contactUS .contactContainer .contact-Content .contactTitle h1 {
+  font-size: 40px;
+  color: #fff;
+}
+#contactUS .contactContainer .contact-Content .contactBtn a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 3px solid #fff;
+  padding: 15px 60px;
+  border-radius: 35px;
+  transition: all 0.5s ease;
+  font-size: 20px;
+}
+#contactUS .contactContainer .contact-Content .contactBtn a:hover {
+  background-color: #fff;
+  color: #045ba8;
+}
+/* -------------------------------------- */
+/* animations */
+@keyframes video {
+  0% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+/* -------------------------------------- */
+@media screen and (max-width: 600px) {
+  .companyContainer {
+    width: 95%;
+  }
+  .companyContainer .companyBanner {
+    width: 100%;
+  }
+  .companyContainer .companyContent {
+    width: 100%;
+  }
+  .companyContainer .companyContent .contentTitle h1 {
+    font-size: 25px;
+  }
+  .companyContainer .companyContent .contentmid {
+    width: 100%;
+  }
+  .companyContainer .companyContent .contentBody {
+    width: 100%;
+  }
+  .consorContainer {
+    width: 95%;
+  }
+  .consorContainer .consorTitle {
+    font-size: 25px;
+  }
+  .consorContainer .videoConsor .playVideo {
+    width: 60px;
+    height: 60px;
+  }
+  #consultant .consContainer {
+    width: 100%;
+  }
+  #consultant .consContainer .consContent .consTitle h2.mainTitle {
+    font-size: 25px;
+  }
+  #consultant .consContainer .consContent .consTitle::before {
+    width: 200px;
+    height: 200px;
+  }
+  #consultant .consContainer .consContent .consTitle::after {
+    width: 200px;
+    height: 200px;
+  }
+  .customerConainer {
+    width: 95%;
+  }
+  .customerConainer .customerContent .cusomerTitle .subTitle h2 {
+    font-size: 25px;
+  }
+  .customerConainer .customerContent .cusomerTitle::before {
+    width: 200px;
+    height: 200px;
+  }
+  .customerConainer .customerContent .cusomerTitle::after {
+    width: 200px;
+    height: 200px;
+  }
+  #contactUS .contactContainer {
+    width: 95%;
+  }
+  #contactUS .contactContainer .contact-Content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #contactUS .contactContainer .contact-Content .contactTitle h1 {
+    font-size: 25px;
+  }
+  #contactUS .contactContainer .contact-Content .contactBtn {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .companyContainer {
+    width: 95%;
+  }
+  .companyContainer .companyBanner {
+    width: 100%;
+  }
+  .companyContainer .companyContent {
+    width: 100%;
+  }
+  .companyContainer .companyContent .contentTitle h1 {
+    font-size: 25px;
+  }
+  .companyContainer .companyContent .contentmid {
+    width: 100%;
+  }
+  .companyContainer .companyContent .contentBody {
+    width: 100%;
+  }
+  .consorContainer {
+    width: 95%;
+  }
+  .consorContainer .consorTitle {
+    font-size: 25px;
+  }
+  .consorContainer .videoConsor .playVideo {
+    width: 60px;
+    height: 60px;
+  }
+  #consultant .consContainer {
+    width: 100%;
+  }
+  #consultant .consContainer .consContent .consTitle h2.mainTitle {
+    font-size: 25px;
+  }
+  #consultant .consContainer .consContent .consTitle::before {
+    width: 200px;
+    height: 200px;
+  }
+  #consultant .consContainer .consContent .consTitle::after {
+    width: 200px;
+    height: 200px;
+  }
+  .customerConainer {
+    width: 95%;
+  }
+  .customerConainer .customerContent .cusomerTitle .subTitle h2 {
+    font-size: 25px;
+  }
+  .customerConainer .customerContent .cusomerTitle::before {
+    width: 200px;
+    height: 200px;
+  }
+  .customerConainer .customerContent .cusomerTitle::after {
+    width: 200px;
+    height: 200px;
+  }
+  #contactUS .contactContainer {
+    width: 95%;
+  }
+  #contactUS .contactContainer .contact-Content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #contactUS .contactContainer .contact-Content .contactTitle h1 {
+    font-size: 25px;
+  }
+  #contactUS .contactContainer .contact-Content .contactBtn {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .companyContainer {
+    width: 70%;
+  }
+  .companyContainer .companyBanner {
+    width: 100%;
+  }
+  .companyContainer .companyContent {
+    width: 100%;
+  }
+  .companyContainer .companyContent .contentTitle h1 {
+    font-size: 25px;
+  }
+  .companyContainer .companyContent .contentmid {
+    width: 100%;
+  }
+  .companyContainer .companyContent .contentBody {
+    width: 100%;
+  }
+  .consorContainer {
+    width: 70%;
+  }
+  .consorContainer .consorTitle {
+    font-size: 25px;
+  }
+  .consorContainer .videoConsor .playVideo {
+    width: 60px;
+    height: 60px;
+  }
+  #consultant .consContainer {
+    width: 100%;
+  }
+  #consultant .consContainer .consContent .consTitle h2.mainTitle {
+    font-size: 25px;
+  }
+  #consultant .consContainer .consContent .consTitle::before {
+    width: 200px;
+    height: 200px;
+  }
+  #consultant .consContainer .consContent .consTitle::after {
+    width: 200px;
+    height: 200px;
+  }
+  .customerConainer {
+    width: 95%;
+  }
+  .customerConainer .customerContent .cusomerTitle .subTitle h2 {
+    font-size: 25px;
+  }
+  .customerConainer .customerContent .cusomerTitle::before {
+    width: 200px;
+    height: 200px;
+  }
+  .customerConainer .customerContent .cusomerTitle::after {
+    width: 200px;
+    height: 200px;
+  }
+  #contactUS .contactContainer {
+    width: 95%;
+  }
+  #contactUS .contactContainer .contact-Content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #contactUS .contactContainer .contact-Content .contactTitle h1 {
+    font-size: 25px;
+  }
+  #contactUS .contactContainer .contact-Content .contactBtn {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .companyContainer {
+    width: 85%;
+  }
+  .companyContainer .companyContent .contentTitle h1 {
+    font-size: 25px;
+  }
+  .companyContainer .companyContent .contentmid {
+    width: 100%;
+  }
+  .companyContainer .companyContent .contentBody {
+    width: 100%;
+  }
+  .consorContainer {
+    width: 85%;
+  }
+  .consorContainer .consorTitle {
+    font-size: 25px;
+  }
+  .consorContainer .videoConsor .playVideo {
+    width: 60px;
+    height: 60px;
+  }
+  #consultant .consContainer {
+    width: 95%;
+  }
+  #consultant .consContainer .consContent .consTitle h2.mainTitle {
+    font-size: 25px;
+  }
+  #consultant .consContainer .consContent .consTitle::before {
+    width: 200px;
+    height: 200px;
+  }
+  #consultant .consContainer .consContent .consTitle::after {
+    width: 200px;
+    height: 200px;
+  }
+  .customerConainer {
+    width: 95%;
+  }
+  .customerConainer .customerContent .cusomerTitle .subTitle h2 {
+    font-size: 25px;
+  }
+  .customerConainer .customerContent .cusomerTitle::before {
+    width: 200px;
+    height: 200px;
+  }
+  .customerConainer .customerContent .cusomerTitle::after {
+    width: 200px;
+    height: 200px;
+  }
+  #contactUS .contactContainer {
+    width: 85%;
+  }
+  #contactUS .contactContainer .contact-Content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #contactUS .contactContainer .contact-Content .contactTitle h1 {
+    font-size: 25px;
+  }
+  #contactUS .contactContainer .contact-Content .contactBtn {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .companyContainer {
+    width: 85%;
+  }
+  .companyContainer .companyContent .contentTitle h1 {
+    font-size: 25px;
+  }
+  .companyContainer .companyContent .contentmid {
+    width: 100%;
+  }
+  .companyContainer .companyContent .contentBody {
+    width: 100%;
+  }
+  .consorContainer {
+    width: 85%;
+  }
+  .consorContainer .consorTitle {
+    font-size: 25px;
+  }
+  .consorContainer .videoConsor .playVideo {
+    width: 60px;
+    height: 60px;
+  }
+  #consultant .consContainer {
+    width: 95%;
+  }
+  #consultant .consContainer .consContent .consTitle h2.mainTitle {
+    font-size: 25px;
+  }
+  #consultant .consContainer .consContent .consTitle::before {
+    width: 200px;
+    height: 200px;
+  }
+  #consultant .consContainer .consContent .consTitle::after {
+    width: 200px;
+    height: 200px;
+  }
+  .customerConainer {
+    width: 95%;
+  }
+  .customerConainer .customerContent .cusomerTitle .subTitle h2 {
+    font-size: 25px;
+  }
+  .customerConainer .customerContent .cusomerTitle::before {
+    width: 200px;
+    height: 200px;
+  }
+  .customerConainer .customerContent .cusomerTitle::after {
+    width: 200px;
+    height: 200px;
+  }
+  #contactUS .contactContainer {
+    width: 85%;
+  }
+  #contactUS .contactContainer .contact-Content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #contactUS .contactContainer .contact-Content .contactTitle h1 {
+    font-size: 25px;
+  }
+  #contactUS .contactContainer .contact-Content .contactBtn {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+  .companyContainer {
+    width: 85%;
+  }
+  .companyContainer .companyContent .contentTitle h1 {
+    font-size: 25px;
+  }
+  .companyContainer .companyContent .contentmid {
+    width: 100%;
+  }
+  .companyContainer .companyContent .contentBody {
+    width: 100%;
+  }
+  .consorContainer {
+    width: 85%;
+  }
+  .consorContainer .consorTitle {
+    font-size: 25px;
+  }
+  .consorContainer .videoConsor .playVideo {
+    width: 60px;
+    height: 60px;
+  }
+  #consultant .consContainer {
+    width: 95%;
+  }
+  #consultant .consContainer .consContent .consTitle h2.mainTitle {
+    font-size: 25px;
+  }
+  #consultant .consContainer .consContent .consTitle::before {
+    width: 200px;
+    height: 200px;
+  }
+  #consultant .consContainer .consContent .consTitle::after {
+    width: 200px;
+    height: 200px;
+  }
+  .customerConainer {
+    width: 95%;
+  }
+  .customerConainer .customerContent .cusomerTitle .subTitle h2 {
+    font-size: 25px;
+  }
+  .customerConainer .customerContent .cusomerTitle::before {
+    width: 200px;
+    height: 200px;
+  }
+  .customerConainer .customerContent .cusomerTitle::after {
+    width: 200px;
+    height: 200px;
+  }
+  #contactUS .contactContainer {
+    width: 85%;
+  }
+  #contactUS .contactContainer .contact-Content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #contactUS .contactContainer .contact-Content .contactTitle h1 {
+    font-size: 25px;
+  }
+  #contactUS .contactContainer .contact-Content .contactBtn {
+    margin-top: 30px;
+  }
+}/*# sourceMappingURL=aboutUs.css.map */

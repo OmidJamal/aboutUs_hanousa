@@ -1,0 +1,1130 @@
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/webfonts/Vazirmatn[wght].woff2') format('woff2 supports variations'),
+        url('../fonts/webfonts/Vazirmatn[wght].woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@mixin flexBox ($display , $justifyContent , $alignItems) {
+    display: $display;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    font-family: Vazirmatn;
+}
+
+.headerContainer {
+    background-image: url('../img/page-banner.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        position: absolute;
+        content: ' ';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .headerContent {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 3;
+        color: #fff;
+
+        h1 {
+            font: {
+                size: 70px;
+            }
+
+            ;
+        }
+
+        h2 {
+            border-bottom: 1px solid #fff;
+        }
+    }
+
+    &::after {
+        background-color: #ff7e00;
+        opacity: 0.15;
+        width: 700px;
+        height: 700px;
+        border-radius: 50%;
+        position: absolute;
+        content: ' ';
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+
+
+
+}
+
+//--------------------------------------------------
+
+.companyContainer {
+    @include flexBox(flex, center, stretch);
+    flex-wrap: wrap;
+    padding: 150px 0;
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+
+    .companyBanner {
+        width: 50%;
+        text-align: center;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        .onIcon {
+            background-color: #ff7e00;
+            opacity: 0.8;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            @include flexBox(flex, center, center);
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+
+    .companyContent {
+        padding-right: 30px;
+        width: 50%;
+
+        .contentTitle {
+            p {
+                font-size: 20px;
+                color: #ff7e00;
+
+                span {
+                    color: #045ba8;
+                }
+            }
+
+            h1 {
+                font: {
+                    size: 45px;
+                }
+
+                ;
+                text-align: justify;
+                color: #1d2733
+            }
+        }
+
+        .contentmid {
+            width: 70%;
+            padding-top: 20px;
+            @include flexBox(flex, space-between, center);
+
+            .midItems {
+                p.p-t {
+                    color: #ff7e00;
+                    font-size: 25px;
+
+                    span {
+                        color: #1d2733;
+                    }
+                }
+
+                p.p-b {
+                    padding-top: 10px;
+                    color: gray;
+                }
+            }
+        }
+
+        .contentBody {
+            padding-top: 20px;
+            width: 70%;
+            text-align: justify;
+
+            p {
+                color: gray;
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+//--------------------------------------------------
+
+.consorContainer {
+    @include flexBox(flex, center, stretch);
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+
+    .consorTitle {
+        text-align: center;
+        color: #1d2733;
+
+        font: {
+            size: 45px;
+        }
+
+        ;
+
+        span {
+            color: #ff7e00;
+        }
+    }
+
+    .videoConsor {
+        text-align: center;
+        margin-top: 50px;
+        position: relative;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+
+        .playVideo {
+            img {
+                width: 25px;
+            }
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90px;
+            height: 90px;
+            background-color: #ff7e00;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 90px;
+            @include flexBox(flex, center, center);
+            transition: all 0.5s ease;
+
+            &:hover {
+                background-color: #045ba8;
+                color: #fff;
+            }
+
+            &::before {
+                position: absolute;
+                content: ' ';
+                width: 100%;
+                height: 100%;
+                border: 1px solid #fff;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                transition: all 0.3s ease 0s;
+                -webkit-animation: video 2s infinite;
+                animation: video 2s infinite;
+                -webkit-transition: all 0.3s ease 0s;
+                -o-transition: all 0.3s ease 0s;
+            }
+        }
+    }
+}
+
+//--------------------------------------------------
+
+#consultant {
+    background-color: #f5f9fc;
+    padding-top: 150px;
+    margin-top: 150px;
+    padding-bottom: 50px;
+
+    .consContainer {
+        width: 70%;
+        margin: auto;
+        position: relative;
+
+        .consContent {
+            position: relative;
+
+            .consTitle {
+                text-align: center;
+                padding-bottom: 70px;
+
+                h5.subTitle {
+                    font-size: 20px;
+                    color: #ff7e00;
+
+                    span {
+                        color: #045ba8;
+                    }
+                }
+
+                h2.mainTitle {
+                    font-size: 45px;
+                    color: #1d2733;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: ' ';
+                    width: 260px;
+                    height: 260px;
+                    border-radius: 50%;
+                    background-color: #045ba8;
+                    opacity: 0.04;
+                    top: 50%;
+                    right: 45%;
+                    transform: translateY(-50%);
+                }
+
+                &::after {
+                    position: absolute;
+                    content: ' ';
+                    width: 260px;
+                    height: 260px;
+                    border-radius: 50%;
+                    background-color: #ff7e00;
+                    opacity: 0.04;
+                    top: 50%;
+                    left: 45%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+
+
+
+.customerConainer {
+    width: 70%;
+    margin: auto;
+    padding-top: 200px;
+
+    .customerContent {
+        position: relative;
+        padding-top: 50px;
+
+        .cusomerTitle {
+            text-align: center;
+
+            &::before {
+                position: absolute;
+                content: ' ';
+                width: 260px;
+                height: 260px;
+                border-radius: 50%;
+                background-color: #045ba8;
+                opacity: 0.04;
+                top: 50%;
+                right: 45%;
+                transform: translateY(-50%);
+            }
+
+            .subTitle {
+                h5 {
+                    font-size: 20px;
+                    color: #ff7e00;
+
+                    span {
+                        color: #045ba8;
+                    }
+                }
+
+                h2 {
+                    font-size: 45px;
+                    color: #1d2733;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: ' ';
+                width: 260px;
+                height: 260px;
+                border-radius: 50%;
+                background-color: #ff7e00;
+                opacity: 0.04;
+                top: 50%;
+                left: 45%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+//-------------------------------------------------
+
+#contactUS {
+    background-color: #045ba8;
+    padding: 50px 0;
+
+    .contactContainer {
+        width: 70%;
+        margin: auto;
+
+        .contact-Content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .contactTitle {
+                h1 {
+                    font-size: 40px;
+                    color: #fff;
+                }
+            }
+
+            .contactBtn {
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                    color: #fff;
+                    border: 3px solid #fff;
+                    padding: 15px 60px;
+                    border-radius: 35px;
+                    transition: all 0.5s ease;
+                    font-size: 20px;
+
+                    &:hover {
+                        background-color: #fff;
+                        color: #045ba8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//--------------------------------------------------
+
+@-webkit-keyframes video {
+    0% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0
+    }
+}
+
+@keyframes video {
+    0% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 0.7
+    }
+
+    100% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .companyContainer {
+        width: 95%;
+
+        .companyBanner {
+            width: 100%;
+        }
+
+        .companyContent {
+            width: 100%;
+
+            .contentTitle {
+                h1 {
+                    font-size: 25px;
+                }
+            }
+
+            .contentmid {
+                width: 100%;
+            }
+
+            .contentBody {
+                width: 100%;
+            }
+        }
+    }
+
+    .consorContainer {
+        width: 95%;
+
+        .consorTitle {
+            font-size: 25px;
+        }
+
+        .videoConsor {
+            .playVideo {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+    #consultant {
+        .consContainer {
+            width: 100%;
+
+            .consContent {
+                .consTitle {
+                    h2.mainTitle {
+                        font-size: 25px;
+                    }
+
+                    &::before {
+                        width: 200px;
+                        height: 200px;
+                    }
+
+                    &::after {
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    .customerConainer {
+        width: 95%;
+
+        .customerContent {
+            .cusomerTitle {
+                .subTitle {
+                    h2 {
+                        font-size: 25px;
+                    }
+                }
+
+                &::before {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                &::after {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    #contactUS {
+        .contactContainer {
+            width: 95%;
+
+            .contact-Content {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .contactTitle {
+                    h1 {
+                        font-size: 25px;
+                    }
+
+                }
+
+                .contactBtn {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .companyContainer {
+        width: 95%;
+
+        .companyBanner {
+            width: 100%;
+        }
+
+        .companyContent {
+            width: 100%;
+
+            .contentTitle {
+                h1 {
+                    font-size: 25px;
+                }
+            }
+
+            .contentmid {
+                width: 100%;
+            }
+
+            .contentBody {
+                width: 100%;
+            }
+        }
+    }
+
+    .consorContainer {
+        width: 95%;
+
+        .consorTitle {
+            font-size: 25px;
+        }
+
+        .videoConsor {
+            .playVideo {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+    #consultant {
+        .consContainer {
+            width: 100%;
+
+            .consContent {
+                .consTitle {
+                    h2.mainTitle {
+                        font-size: 25px;
+                    }
+
+                    &::before {
+                        width: 200px;
+                        height: 200px;
+                    }
+
+                    &::after {
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    .customerConainer {
+        width: 95%;
+
+        .customerContent {
+            .cusomerTitle {
+                .subTitle {
+                    h2 {
+                        font-size: 25px;
+                    }
+                }
+
+                &::before {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                &::after {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    #contactUS {
+        .contactContainer {
+            width: 95%;
+
+            .contact-Content {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .contactTitle {
+                    h1 {
+                        font-size: 25px;
+                    }
+
+                }
+
+                .contactBtn {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .companyContainer {
+        width: 70%;
+
+        .companyBanner {
+            width: 100%;
+        }
+
+        .companyContent {
+            width: 100%;
+
+            .contentTitle {
+                h1 {
+                    font-size: 25px;
+                }
+            }
+
+            .contentmid {
+                width: 100%;
+            }
+
+            .contentBody {
+                width: 100%;
+            }
+        }
+    }
+
+    .consorContainer {
+        width: 70%;
+
+        .consorTitle {
+            font-size: 25px;
+        }
+
+        .videoConsor {
+            .playVideo {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+    #consultant {
+        .consContainer {
+            width: 100%;
+
+            .consContent {
+                .consTitle {
+                    h2.mainTitle {
+                        font-size: 25px;
+                    }
+
+                    &::before {
+                        width: 200px;
+                        height: 200px;
+                    }
+
+                    &::after {
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    .customerConainer {
+        width: 95%;
+
+        .customerContent {
+            .cusomerTitle {
+                .subTitle {
+                    h2 {
+                        font-size: 25px;
+                    }
+                }
+
+                &::before {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                &::after {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    #contactUS {
+        .contactContainer {
+            width: 95%;
+
+            .contact-Content {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .contactTitle {
+                    h1 {
+                        font-size: 25px;
+                    }
+
+                }
+
+                .contactBtn {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .companyContainer {
+        width: 85%;
+
+        .companyBanner {
+            // width: 100%;
+        }
+
+        .companyContent {
+            // width: 100%;
+
+            .contentTitle {
+                h1 {
+                    font-size: 25px;
+                }
+            }
+
+            .contentmid {
+                width: 100%;
+            }
+
+            .contentBody {
+                width: 100%;
+            }
+        }
+    }
+
+    .consorContainer {
+        width: 85%;
+
+        .consorTitle {
+            font-size: 25px;
+        }
+
+        .videoConsor {
+            .playVideo {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+    #consultant {
+        .consContainer {
+            width: 95%;
+
+            .consContent {
+                .consTitle {
+                    h2.mainTitle {
+                        font-size: 25px;
+                    }
+
+                    &::before {
+                        width: 200px;
+                        height: 200px;
+                    }
+
+                    &::after {
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    .customerConainer {
+        width: 95%;
+
+        .customerContent {
+            .cusomerTitle {
+                .subTitle {
+                    h2 {
+                        font-size: 25px;
+                    }
+                }
+
+                &::before {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                &::after {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    #contactUS {
+        .contactContainer {
+            width: 85%;
+
+            .contact-Content {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .contactTitle {
+                    h1 {
+                        font-size: 25px;
+                    }
+
+                }
+
+                .contactBtn {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    .companyContainer {
+        width: 85%;
+
+        .companyBanner {
+            // width: 100%;
+        }
+
+        .companyContent {
+            // width: 100%;
+
+            .contentTitle {
+                h1 {
+                    font-size: 25px;
+                }
+            }
+
+            .contentmid {
+                width: 100%;
+            }
+
+            .contentBody {
+                width: 100%;
+            }
+        }
+    }
+
+    .consorContainer {
+        width: 85%;
+
+        .consorTitle {
+            font-size: 25px;
+        }
+
+        .videoConsor {
+            .playVideo {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+    #consultant {
+        .consContainer {
+            width: 95%;
+
+            .consContent {
+                .consTitle {
+                    h2.mainTitle {
+                        font-size: 25px;
+                    }
+
+                    &::before {
+                        width: 200px;
+                        height: 200px;
+                    }
+
+                    &::after {
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    .customerConainer {
+        width: 95%;
+
+        .customerContent {
+            .cusomerTitle {
+                .subTitle {
+                    h2 {
+                        font-size: 25px;
+                    }
+                }
+
+                &::before {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                &::after {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    #contactUS {
+        .contactContainer {
+            width: 85%;
+
+            .contact-Content {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .contactTitle {
+                    h1 {
+                        font-size: 25px;
+                    }
+
+                }
+
+                .contactBtn {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+    .companyContainer {
+        width: 85%;
+
+        .companyBanner {
+            // width: 100%;
+        }
+
+        .companyContent {
+            // width: 100%;
+
+            .contentTitle {
+                h1 {
+                    font-size: 25px;
+                }
+            }
+
+            .contentmid {
+                width: 100%;
+            }
+
+            .contentBody {
+                width: 100%;
+            }
+        }
+    }
+
+    .consorContainer {
+        width: 85%;
+
+        .consorTitle {
+            font-size: 25px;
+        }
+
+        .videoConsor {
+            .playVideo {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+    #consultant {
+        .consContainer {
+            width: 95%;
+
+            .consContent {
+                .consTitle {
+                    h2.mainTitle {
+                        font-size: 25px;
+                    }
+
+                    &::before {
+                        width: 200px;
+                        height: 200px;
+                    }
+
+                    &::after {
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    .customerConainer {
+        width: 95%;
+
+        .customerContent {
+            .cusomerTitle {
+                .subTitle {
+                    h2 {
+                        font-size: 25px;
+                    }
+                }
+
+                &::before {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                &::after {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    #contactUS {
+        .contactContainer {
+            width: 85%;
+
+            .contact-Content {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .contactTitle {
+                    h1 {
+                        font-size: 25px;
+                    }
+
+                }
+
+                .contactBtn {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
