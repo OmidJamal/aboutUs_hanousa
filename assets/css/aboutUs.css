@@ -13,7 +13,6 @@
   font-family: Vazirmatn;
 }
 
-/* headerAboutUs Section styles  start --------- */
 .headerContainer {
   background-image: url("../img/page-banner.jpg");
   background-position: center center;
@@ -60,8 +59,7 @@
   transform: translate(-50%, -50%);
   z-index: 2;
 }
-/* -------------------------------------- */
-/* ourCompany section styles satrt ------ */
+
 .companyContainer {
   display: flex;
   justify-content: center;
@@ -140,8 +138,7 @@
   color: gray;
   padding-top: 20px;
 }
-/* -------------------------------------- */
-/* consor Section style start ----------- */
+
 .consorContainer {
   display: flex;
   justify-content: center;
@@ -204,8 +201,7 @@
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
 }
-/* -------------------------------------- */
-/* consultant Section styles Start */
+
 #consultant {
   background-color: #f5f9fc;
   padding-top: 150px;
@@ -259,8 +255,7 @@
   left: 45%;
   transform: translateY(-50%);
 }
-/* -------------------------------------- */
-/* customer Section start */
+
 .customerConainer {
   width: 70%;
   margin: auto;
@@ -308,8 +303,7 @@
   left: 45%;
   transform: translateY(-50%);
 }
-/* -------------------------------------- */
-/* contactUS Section start */
+
 #contactUS {
   background-color: #045ba8;
   padding: 50px 0;
@@ -341,8 +335,6 @@
   background-color: #fff;
   color: #045ba8;
 }
-/* -------------------------------------- */
-/* animations */
 @keyframes video {
   0% {
     transform: scale(1.2);
@@ -353,7 +345,6 @@
     opacity: 0;
   }
 }
-/* -------------------------------------- */
 @media screen and (max-width: 600px) {
   .companyContainer {
     width: 95%;
